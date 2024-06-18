@@ -26,31 +26,24 @@ body {
 
 main {
     min-height: 1024px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    padding-top: 133px;
 
-form {
-    position: relative;
-    width: 540px;
-    height: 632px;
-    background: linear-gradient(180deg, rgb(20, 19, 27), rgb(8, 7, 11) 100%);
-
-
-    &::before {
-        content: "Password Generator";
+    h1 {
         color: var(--grey);
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        font-family: "JetBrains Mono", monospace;
         font-size: 24px;
         font-weight: 700;
         line-height: 32px;
         letter-spacing: 0px;
-        top: -63px;
+        text-align: center;
+        margin-bottom: 31px;
     }
+}
+
+form {
+    width: 540px;
+    height: 632px;
+    margin: 0 auto 196px;
+    background: linear-gradient(180deg, rgb(20, 19, 27), rgb(8, 7, 11) 100%);
 }
 
 .password {
@@ -62,8 +55,7 @@ form {
     align-items: center;
     margin-bottom: 24px;
 
-    h1 {
-        /* Heading (L) */
+    h2 {
         color: var(--almost-white);
         font-family: JetBrains Mono;
         font-size: 32px;
@@ -124,7 +116,6 @@ form {
         }
 
         p:last-child {
-            /* Heading (L) */
             color: var(--neon-green);
             font-size: 32px;
             font-weight: 700;
@@ -159,10 +150,7 @@ form {
                 cursor: pointer;
                 position: relative;
                 z-index: 2;
-
             }
-
-
         }
 
         .slider {
@@ -179,6 +167,9 @@ form {
 
 .settings {
     margin: 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
     &>div {
         display: flex;
@@ -209,7 +200,6 @@ form {
         font-weight: 700;
         line-height: 24px;
         letter-spacing: 0px;
-        text-align: center;
     }
 
     .strength-bar {
@@ -218,7 +208,6 @@ form {
 
         .strength-status {
             color: var(--almost-white);
-
             font-size: 24px;
             font-weight: 700;
             line-height: 32px;
@@ -255,3 +244,133 @@ form {
             }
         }
     }
+}
+
+.generate {
+    width: 100%;
+    height: 65px;
+    margin-top: 32px;
+    background-color: var(--neon-green);
+    border: none;
+    color: var(--dark-grey);
+    font-family: JetBrains Mono;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+
+    span {
+        margin-left: 24px;
+    }
+
+    &:hover {
+        background-color: var(--dark-grey);
+        border: 2px solid var(--neon-green);
+        color: var(--neon-green);
+
+        span {
+            filter: brightness(0) invert(1);
+        }
+    }
+}
+
+/* Mobile Version */
+
+@media screen and (max-width: 600px) {
+    main {
+        min-height: 667px;
+        padding-top: 64px;
+        min-width: 370px;
+
+        h1 {
+            font-size: 16px;
+            line-height: 21px;
+            margin-bottom: 16px;
+        }
+    }
+
+    form {
+        width: 91.47%;
+        height: 503px;
+        margin: 0 auto 63px;
+    }
+
+    .password {
+        height: 64px;
+        padding: 17px 15.5px 15px 16px;
+        margin-bottom: 16px;
+
+        h2 {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    .bottom {
+        height: 423px;
+        padding: 21px 32px 16px;
+    }
+
+    .length {
+        height: 67px;
+
+        .length-details {
+            height: 31px;
+            margin-bottom: 8px;
+
+            p:first-child {
+                font-size: 16px;
+                line-height: 21px;
+            }
+
+            p:last-child {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+    }
+
+    .settings {
+        gap: 16px;
+
+        &>div {
+            gap: 20px;
+
+            label {
+                font-size: 16px;
+                line-height: 21px;
+            }
+        }
+    }
+
+    .strength {
+        height: 56px;
+        padding: 0 16px;
+
+        p {
+            font-size: 16px;
+            line-height: 21px;
+        }
+
+        .strength-bar {
+            .strength-status {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+    }
+
+    .generate {
+        height: 56px;
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 21px;
+
+        span {
+            margin-left: 16px;
+        }
+    }
+}
