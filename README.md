@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Repository](https://github.com/simokitkat/Password-generator-app)
+- Solution URL: [Github Repository](https://github.com/simokitkat/GeniePass)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
